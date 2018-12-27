@@ -1,0 +1,16 @@
+<h1>COUNT THE WORDS</h1>
+
+<ul>
+<li><a href="{% url 'home' %}">Home</a></li>
+<li><a href="{% url 'about' %}">About This Site</a></li>
+</ul>
+
+<h2>There are {{ count }} words in your entered text.</h2>
+<h2>Your Text:</h2>
+<p>{{ fulltext }}</p>
+
+<ul>
+{% for word, counttotal in sortedwords %}
+  <li>{{ word }}: {{ counttotal }}</li>
+{% endfor %}
+</ul>
